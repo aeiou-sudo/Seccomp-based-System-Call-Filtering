@@ -1,0 +1,16 @@
+# Advanced policy file
+# Format: action syscall_name [arg specification]
+# action: 0 = block, 1 = allow (default is allow)
+
+# Block socket operations
+0 socket
+0 connect
+0 bind
+0 listen
+0 accept
+0 accept4
+
+# Example of argument-specific blocking
+# Block open with specific flags
+# This blocks open() when O_RDWR (2) is used
+0 open arg1=2

@@ -1,0 +1,9 @@
+# Restrictive policy file
+# Format: action syscall_name
+# action: 0 = block, 1 = allow (default is allow)
+0 socket
+0 connect
+0 bind
+0 listen
+0 accept
+0 accept4
